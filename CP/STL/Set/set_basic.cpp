@@ -1,3 +1,6 @@
+//set -> unique and sorted
+//log2N
+
 #include <bits/stdc++.h>
 using namespace std;
 

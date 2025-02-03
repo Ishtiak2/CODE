@@ -18,6 +18,8 @@ int main()
     map<string, string> gender;
     
     gender["Ishtiak"] = "male";
+    gender["Mahin"] = "male";
+
     cout << gender["Ishtiak"] << endl;
 
 
