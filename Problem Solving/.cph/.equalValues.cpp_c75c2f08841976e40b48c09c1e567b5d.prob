@@ -1,0 +1,1 @@
+{"name":"Local: equalValues","url":"/Users/ishtiakrahman/Desktop/CODE/Problem Solving/equalValues.cpp","tests":[{"id":1750779646627,"input":"3\n4\n2 4 1 3\n3\n1 1 1\n10\n7 5 5 5 10 9 9 4 6 10\n","output":"3\n0\n35\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/ishtiakrahman/Desktop/CODE/Problem Solving/equalValues.cpp","group":"local","local":true}

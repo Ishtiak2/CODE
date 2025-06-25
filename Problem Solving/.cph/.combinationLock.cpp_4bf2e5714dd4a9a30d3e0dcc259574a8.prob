@@ -1,0 +1,1 @@
+{"name":"Local: combinationLock","url":"/Users/ishtiakrahman/Desktop/CODE/Problem Solving/combinationLock.cpp","tests":[{"id":1749953446887,"input":"3\n4\n5\n3","output":"-1\n5 4 3 2 1\n3 2 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/ishtiakrahman/Desktop/CODE/Problem Solving/combinationLock.cpp","group":"local","local":true}

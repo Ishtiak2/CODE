@@ -17,6 +17,10 @@
         "unordered_map": "cpp",
         "valarray": "cpp",
         "iostream": "cpp",
-        "ostream": "cpp"
-    }
+        "ostream": "cpp",
+        "bitset": "cpp",
+        "queue": "cpp"
+    },
+    "C_Cpp.default.compilerPath": "/usr/bin/clang++",
+    "C_Cpp.default.intelliSenseMode": "macos-clang-arm64"
 }

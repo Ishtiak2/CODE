@@ -25,7 +25,7 @@ int main()
 {
     optimize();
     
-    cout << fact(100) << endl;
+    cout << fact(10) << endl;
 
     return 0;
 }
