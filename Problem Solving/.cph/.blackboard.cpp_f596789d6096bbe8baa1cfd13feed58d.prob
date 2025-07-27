@@ -1,0 +1,1 @@
+{"name":"Local: blackboard","url":"/Users/ishtiakrahman/Desktop/CODE/Problem Solving/blackboard.cpp","tests":[{"id":1751383537199,"input":"6\n2\n4\n5\n7\n100\n6","output":"Alice\nBob\nAlice\nAlice\nBob\nAlice"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/ishtiakrahman/Desktop/CODE/Problem Solving/blackboard.cpp","group":"local","local":true}

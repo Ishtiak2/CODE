@@ -14,22 +14,29 @@ int main()
     while(t--) {
         ll n;
         cin >> n;
-        unordered_map<ll,ll> mp;
-
-        ll x;
+        vector<ll> a(n+1);
+        
         for(ll i = 1; i <= n; i++) {
-            cin >> x;
-            mp[x]++;
+            cin >> a[i];
         }
+        vector<ll> v;
+        ll count = 1;
 
-        ll min = INT_MAX;
+        for(ll i = 1; i <= n; i++) {
+            if(i != n && a[i] == a[i+1]) count ++;
+            
+            else {
+                v.push_back(a[i] * (n-count));
+                count = 1;
+            }
 
-        for(auto it : mp) {
-            ll ans = (n - it.second) * it.first;
-            if(min > ans) min = ans;
         }
+        auto min = min_element(v.begin(), v.end());
+        if (min != v.end()) {
+        cout << *min << endl;
+    }
 
-        cout << min << endl;
+        
     }
     return 0;
 }
