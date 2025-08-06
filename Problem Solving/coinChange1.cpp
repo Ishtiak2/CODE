@@ -6,7 +6,8 @@ using namespace std;
 #define optimize() ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 
 const int INF = 1e9; // safer than INT_MAX for adding +1
-int dp[10010];
+const int sized = 1e6+123;
+int dp[sized];
 
 int func(int amount, vector<int> &coins) {
     if (amount == 0) return 0;
@@ -31,7 +32,11 @@ int coinChange(vector<int> &coins, int amount) {
 
 int main() {
     optimize();
-    vector<int> coins = {1, 2, 5};
-    cout << coinChange(coins, 6) << endl;
+    ll n,x;
+    cin >> n >> x;
+    vector<int> coins (n);
+    for(ll i = 0; i < n; i++) cin >> coins[i];
+
+    cout << coinChange(coins, x) << endl;
     return 0;
 }

@@ -27,10 +27,10 @@ int main()
     else
         cout << "\nElement 4 is not available in the set." << endl;
 
-    cout << "\nErasing element 3, the first element, and the last element..." << endl;
+    cout << "\nErasing element 3, the first element, and the take element..." << endl;
     s.erase(3);            // Removes element `3`
     s.erase(s.begin());    // Removes the first element (`1`)
-    s.erase(--s.end());    // Removes the last element (`5`)
+    s.erase(--s.end());    // Removes the take element (`5`)
 
     cout << "Set contents after erasing: ";
     for (auto u : s) cout << u << " ";

@@ -30,7 +30,7 @@ void add(int x) {
 
 void remove(int x) {
     freq[x]--;
-    if (freq[x] == 0) currAnswer--; // Removed last occurrence
+    if (freq[x] == 0) currAnswer--; // Removed take occurrence
 }
 
 int main() {

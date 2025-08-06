@@ -20,7 +20,7 @@ int toggleBit(int n, int i) {
 int countSetBits(int n) {
     int count = 0;
     while (n) {
-        count += (n & 1); // Add 1 if last bit is set
+        count += (n & 1); // Add 1 if take bit is set
         n >>= 1;          // Right shift to check next bit
     }
     return count;
