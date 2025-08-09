@@ -31,8 +31,7 @@ ll lis_memoization(ll n, vector<ll> &a) {
 
 // ------------------ Tabulation (Bottom-Up DP) ------------------
 
-ll lis_tabulation(vector<ll> &a) {
-    ll n = a.size() - 1; // Because a is 1-indexed
+ll lis_tabulation(ll n, vector<ll> &a) {
     vector<ll> dp(n + 1, 1);
 
     for (ll i = 1; i <= n; i++) {
@@ -48,15 +47,17 @@ ll lis_tabulation(vector<ll> &a) {
 
 // ------------------ Best Approach (Binary Search + Greedy) ------------------
 
-ll lis_best(vector<ll>& a) {
-    ll n = a.size() - 1; // Because a is 1-indexed
+ll lis_best(ll n, vector<ll>& a) {
     vector<ll> temp;
-    temp.push_back(a[1]); // temp[1] = a[1] will not because temp is an empty vector
+    temp.push_back(a[1]); // temp[1] = a[1] will not work because temp is an empty vector
 
     for (ll i = 2; i <= n; i++) {
+        
         if (a[i] > temp.back()) {
             temp.push_back(a[i]);
-        } else {
+        }
+        
+        else {
             ll idx = lower_bound(temp.begin(), temp.end(), a[i]) - temp.begin();
             temp[idx] = a[i];
         }
@@ -77,8 +78,8 @@ int main() {
     for (ll i = 1; i <= n; i++) cin >> a[i];
 
     cout << "Memoization: " << lis_memoization(n, a) << endl;
-    cout << "Tabulation: " << lis_tabulation(a) << endl;
-    cout << "Best O(n log n): " << lis_best(a) << endl;
+    cout << "Tabulation: " << lis_tabulation(n,a) << endl;
+    cout << "Best O(n log n): " << lis_best(n, a) << endl;
 
     return 0;
 }
