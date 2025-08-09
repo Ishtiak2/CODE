@@ -1,0 +1,1 @@
+{"name":"Local: vacation","url":"/Users/ishtiakrahman/Desktop/CODE/Problem Solving/vacation.cpp","tests":[{"id":1754568358100,"input":"3\n10 40 70\n20 50 80\n30 60 90\n","output":"123"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/ishtiakrahman/Desktop/CODE/Problem Solving/vacation.cpp","group":"local","local":true}

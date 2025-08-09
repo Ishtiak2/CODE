@@ -5,7 +5,7 @@ using namespace std;
 #define endl '\n'
 #define optimize() ios_base:: sync_with_stdio(0); cin.tie(0); cout.tie(0);
 
-// 1D Weight-Based Knapsack DP (Most common, O(n * W))
+// 1D Weight-Based Knapsack DP (Most common, Time Complexity: O(n * W), Spcae: O(W))
 
 ll knapSac1D(ll n, ll cap, vector<ll> &w, vector<ll> &v) {
     vector<ll> dp(cap + 1, 0);
@@ -18,7 +18,7 @@ ll knapSac1D(ll n, ll cap, vector<ll> &w, vector<ll> &v) {
     return dp[cap];
 }
 
-// 2D Weight-Based Knapsack DP (Classical DP Table, O(n * W))
+// 2D Weight-Based Knapsack DP (Classical DP Table, Time : O(n * W), Space: O(n * W))
 
 ll knapSac2D(ll n, ll cap, vector<ll> &w, vector<ll> &v) {
     vector<vector<ll>> dp(n + 1, vector<ll>(cap + 1, 0));
@@ -34,7 +34,7 @@ ll knapSac2D(ll n, ll cap, vector<ll> &w, vector<ll> &v) {
     return dp[n][cap];
 }
 
-// Value-Based Knapsack DP (When W is large, but sum of values is small)
+// Value-Based Knapsack DP (When W is large, but sum of values is small), Time: O(n*sum_v)
 
 ll knapSacValueDP(ll n, ll cap, vector<ll> &w, vector<ll> &v) {
     
@@ -59,6 +59,7 @@ ll knapSacValueDP(ll n, ll cap, vector<ll> &w, vector<ll> &v) {
 
 int main() {
     optimize();
+    
     ll n, x;
     cin >> n >> x;
 

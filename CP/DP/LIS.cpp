@@ -51,7 +51,7 @@ ll lis_tabulation(vector<ll> &a) {
 ll lis_best(vector<ll>& a) {
     ll n = a.size() - 1; // Because a is 1-indexed
     vector<ll> temp;
-    temp.push_back(a[1]);
+    temp.push_back(a[1]); // temp[1] = a[1] will not because temp is an empty vector
 
     for (ll i = 2; i <= n; i++) {
         if (a[i] > temp.back()) {
