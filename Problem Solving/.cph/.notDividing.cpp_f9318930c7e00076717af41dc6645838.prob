@@ -1,0 +1,1 @@
+{"name":"Local: notDividing","url":"/Users/ishtiakrahman/Desktop/CODE/Problem Solving/notDividing.cpp","tests":[{"id":1754975732456,"input":"3\n4\n2 4 3 6\n3\n1 2 3\n5\n2 1 1 4 2","output":"4 5 6 7\n3 2 3\n3\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/ishtiakrahman/Desktop/CODE/Problem Solving/notDividing.cpp","group":"local","local":true}

@@ -6,34 +6,26 @@ using namespace std;
 #define optimize() ios_base:: sync_with_stdio(0); cin.tie(0); cout.tie(0);
 
 //Bottom-up DP (2D Table)	Time: O(n × m) Space: O(n × m)
-ll editDistance2D(string& a, string& b) {
-    ll n = a.size();
-    ll m = b.size();
+ll editDistance(string& a, string& b) {
+    ll lenA = a.size();
+    ll lenB = b.size();
 
-    vector<vector<ll>> dp(n + 1, vector<ll>(m + 1, 0));
+    vector<vector<ll>> dp(lenB+1, vector<ll> (lenA+1,0));
 
-    for (ll i = 0; i <= n; i++) {
-        dp[i][0] = i;
-    }
-    for (ll j = 0; j <= m; j++) {
-        dp[0][j] = j;
-    }
+    for(ll i = 0; i <= lenA; i++) dp[0][i] = i;
+    for(ll j = 0; j <= lenB; j++) dp[j][0] =j;
 
-    for (ll i = 1; i <= n; i++) {
-        for (ll j = 1; j <= m; j++) {
-            
-            if (a[i - 1] == b[j - 1]) {
-                dp[i][j] = dp[i - 1][j - 1];
+    for(ll i = 1; i <= lenB; i++) {
+        for(ll j = 1; j <= lenA; j++) {
+            if(b[i-1] != a[j-1]){
+                dp[i][j] = 1 + min({dp[i][j-1], dp[i-1][j], dp[i-1][j-1]});
             }
-            
             else {
-
-                dp[i][j] = min({dp[i][j-1], dp[i-1][j], dp[i-1][j-1]}) + 1;
+                dp[i][j] = dp[i-1][j-1];
             }
         }
-    }
-
-    return dp[n][m];
+    } 
+    return dp[lenB][lenA];
 }
 
 //Bottom-up DP (1D optimized) Time : O(n × m) Space: O(m)

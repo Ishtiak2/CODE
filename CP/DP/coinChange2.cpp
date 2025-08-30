@@ -100,7 +100,7 @@ ll changeRecursive(int amount, vector<int>& coins) {
 
 
 int main() {
-    int amount = 5;
+    int amount = 11;
     vector<int> coins = {1, 2, 5};
 
     cout << "2D DP: Number of combinations = " << change2D(amount, coins) << endl;

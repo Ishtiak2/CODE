@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms + Media Embedding Example</title>
+</head>
+<body>
+
+    <h1>Contact Us</h1>
+    
+    <!-- Form Section -->
+    <form action="/submit" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="4" cols="30" placeholder="Type here..."></textarea>
+        <br><br>
+
+        <label>Choose your favorite type of media:</label><br>
+        <input type="radio" id="video" name="media" value="video" checked>
+        <label for="video">Video</label><br>
+        <input type="radio" id="audio" name="media" value="audio">
+        <label for="audio">Audio</label><br><br>
+
+        <label for="file">Upload a file:</label>
+        <input type="file" id="file" name="file">
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <hr>
+
+    <!-- Media Embedding Section -->
+    <h2>Our Introduction Video</h2>
+    <video width="480" controls>
+        <source src="sample-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <h2>Background Music</h2>
+    <audio controls>
+        <source src="sample-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h2>Google Map (Iframe)</h2>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.903377658968!2d90.39110031536392!3d23.75090339461771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b5c3f69a4b%3A0x429ef92a85c0b8b3!2sShahjalal%20University%20of%20Science%20and%20Technology!5e0!3m2!1sen!2sbd!4v1691167812345"
+        width="480" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+
+</body>
+</html>

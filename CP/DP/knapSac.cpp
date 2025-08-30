@@ -25,6 +25,7 @@ ll knapSac2D(ll n, ll cap, vector<ll> &w, vector<ll> &v) {
     
     for(ll i = 1; i <= n; i++) {
         for(ll j = 0; j <= cap; j++) {
+            
             if(j < w[i])
                 dp[i][j] = dp[i - 1][j];
             else
@@ -35,7 +36,9 @@ ll knapSac2D(ll n, ll cap, vector<ll> &w, vector<ll> &v) {
 }
 
 // Value-Based Knapsack DP (When W is large, but sum of values is small), Time: O(n*sum_v)
+//Value- Based Knapsack is simmilar to the Weight-Based Knapsack.
 
+//1D Value- Based Knapsack DP  Time: O(n*sum_v)
 ll knapSacValueDP(ll n, ll cap, vector<ll> &w, vector<ll> &v) {
     
     ll sumV = accumulate(v.begin(), v.end(), 0LL);
@@ -56,6 +59,39 @@ ll knapSacValueDP(ll n, ll cap, vector<ll> &w, vector<ll> &v) {
     }
     return 0;
 }
+
+// 2D Value-Based Knapsack DP 
+
+ll knapSacVal2D(ll n, ll cap, const vector<ll>& w, const vector<ll>& val) {
+    const ll INF = 1e15;
+
+    // Total possible value sum
+    ll V = accumulate(val.begin() + 1, val.end(), 0LL);
+
+    // dp[i][j] = min weight to achieve value j using first i items
+    vector<vector<ll>> dp(n + 1, vector<ll>(V + 1, INF));
+    dp[0][0] = 0;
+
+    for (ll i = 1; i <= n; i++) {
+        for (ll j = 0; j <= V; j++) {
+            
+            if (j < val[i]) {
+                dp[i][j] = dp[i - 1][j]; // can't take item
+            }
+            
+            else {
+                dp[i][j] = min(dp[i - 1][j], w[i] + dp[i - 1][j - val[i]]);
+            }
+        }
+    }
+
+    // Find maximum value achievable within capacity
+    for (ll j = V; j >= 0; j--) {
+        if (dp[n][j] <= cap) return j;
+    }
+    return 0;
+}
+
 
 int main() {
     optimize();

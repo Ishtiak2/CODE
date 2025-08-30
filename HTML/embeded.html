@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Example of embedding audio, video, and iframes in HTML">
+    <title>Media Embedding & Iframes Example</title>
+</head>
+<body>
+    <header>
+        <h1>HTML Media Embedding & Iframes</h1>
+        <p>This page shows examples of embedding audio, video, and iframes in HTML.</p>
+    </header>
+
+    <main>
+        <!-- Audio Example -->
+        <section>
+            <h2>Audio Example</h2>
+            <p>Here is an example of an audio player:</p>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                <source src="audio.ogg" type="audio/ogg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <!-- Video Example -->
+        <section>
+            <h2>Video Example</h2>
+            <p>Here is an example of a video player:</p>
+            <video width="640" height="360" controls poster="thumbnail.jpg">
+                <source src="video.mp4" type="video/mp4">
+                <source src="video.webm" type="video/webm">
+                Your browser does not support the video element.
+            </video>
+        </section>
+
+        <!-- YouTube Video Embed -->
+        <section>
+            <h2>Embedded YouTube Video</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </section>
+
+        <!-- Google Maps Embed -->
+        <section>
+            <h2>Embedded Google Map</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7300.446291031997!2d91.8709377!3d24.9001487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3750552341ec6a43%3A0xd7b40b0f9a7db0c5!2sShahjalal%20University%20of%20Science%20and%20Technology!5e0!3m2!1sen!2sbd!4v1691234567890"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Media Embedding Demo</p>
+    </footer>
+</body>
+</html>

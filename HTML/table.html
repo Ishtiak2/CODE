@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    
+    <!-- CSS Part. Removing it will remove the lines -->
+    <style>
+        /* Basic styling so tables are visible */
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        caption {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Basic Table -->
+    <table>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+        <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+        </tr>
+        <tr>
+            <td>Data 3</td>
+            <td>Data 4</td>
+        </tr>
+    </table>
+    
+    <hr>
+
+    <!-- Improved Semantic Table -->
+    <table>
+        <caption>Monthly Sales</caption>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>January</th>
+                <th>February</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Apples</td>
+                <td>100</td>
+                <td>120</td>
+            </tr>
+            <tr>
+                <td>Oranges</td>
+                <td>80</td>
+                <td>90</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
