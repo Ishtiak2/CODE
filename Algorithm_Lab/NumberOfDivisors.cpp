@@ -1,24 +1,45 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void numberOfDiv(int n)
+void primeFactor(int n)
 {
-    int count = 0;
+    vector<int> primes;
+    vector<int> freq;
 
-    for (int i = 1; i <= n; i++)
+    for (int i = 2; i * i <= n; i++)
     {
         if (n % i == 0)
         {
-            cout << i << endl;
-            count++;
+            int cnt = 0;
+            while (n % i == 0)
+            {
+                n /= i;
+                cnt++;
+            }
+            primes.push_back(i);
+            freq.push_back(cnt);
         }
     }
 
-    cout << "Total divisors: " << count << endl;
+    // If n is still > 1, it is a prime
+    if (n > 1)
+    {
+        primes.push_back(n);
+        freq.push_back(1);
+    }
+
+    // Count number of divisors
+    int divisors = 1;
+    for (int f : freq)
+    {
+        divisors *= (f + 1);
+    }
+
+    cout << divisors << endl;
 }
 
 int main()
 {
-    numberOfDiv(36);
+    primeFactor(100);
     return 0;
 }
